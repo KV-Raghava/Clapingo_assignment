@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "aa3b7664-8d91-42af-93e1-5e13fbaa361b",
+		"name": "favTeacher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10266034"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test3@email.com\",\n    \"firstName\":\"Test3\",\n    \"lastName\":\"3\",\n    \"password\":\"password\",\n    \"accountType\":\"STUDENT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test3@email.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWU0OTVjODMxZjgwODdjMmM2OWIyYSIsImVtYWlsSWQiOiJ0ZXN0QGVtYWlsLmNvbSIsImFjY291bnRUeXBlIjoiU1RVREVOVCIsImlhdCI6MTY2NzEyNDI2NSwiZXhwIjoxNjY3MjEwNjY1fQ.3wEXB3a4cxc04lQShrJO9zeB7PMUdadG5cvsg8uU33g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@email.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favorites of User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWU0OTVjODMxZjgwODdjMmM2OWIyYSIsImVtYWlsSWQiOiJ0ZXN0QGVtYWlsLmNvbSIsImFjY291bnRUeXBlIjoiU1RVREVOVCIsImlhdCI6MTY2NzEyNDI2NSwiZXhwIjoxNjY3MjEwNjY1fQ.3wEXB3a4cxc04lQShrJO9zeB7PMUdadG5cvsg8uU33g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@email.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/favorites/635e495c831f8087c2c69b2a",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"favorites",
+						"635e495c831f8087c2c69b2a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favorites",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWU0YmM2MGZjNTVjZDJkMWY0YmRkNiIsImVtYWlsSWQiOiJ0ZXN0M0BlbWFpbC5jb20iLCJhY2NvdW50VHlwZSI6IlNUVURFTlQiLCJpYXQiOjE2NjcxMjU3MTcsImV4cCI6MTY2NzIxMjExN30.NLOBYyXWsM1jwuRSmfhYPFR2Lh5w_j9Mt-TkHKe5LqY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@email.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/favorites/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"favorites",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Most Favorite",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWU0YmM2MGZjNTVjZDJkMWY0YmRkNiIsImVtYWlsSWQiOiJ0ZXN0M0BlbWFpbC5jb20iLCJhY2NvdW50VHlwZSI6IlNUVURFTlQiLCJpYXQiOjE2NjcxMjU3MTcsImV4cCI6MTY2NzIxMjExN30.NLOBYyXWsM1jwuRSmfhYPFR2Lh5w_j9Mt-TkHKe5LqY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@email.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/mostFavorite",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"mostFavorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWU0YmM2MGZjNTVjZDJkMWY0YmRkNiIsImVtYWlsSWQiOiJ0ZXN0M0BlbWFpbC5jb20iLCJhY2NvdW50VHlwZSI6IlNUVURFTlQiLCJpYXQiOjE2NjcxMjU3MTcsImV4cCI6MTY2NzIxMjExN30.NLOBYyXWsM1jwuRSmfhYPFR2Lh5w_j9Mt-TkHKe5LqY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"635e49ad831f8087c2c69b2e\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/favorite",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Un-Favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWU0OTVjODMxZjgwODdjMmM2OWIyYSIsImVtYWlsSWQiOiJ0ZXN0QGVtYWlsLmNvbSIsImFjY291bnRUeXBlIjoiU1RVREVOVCIsImlhdCI6MTY2NzEyNDI2NSwiZXhwIjoxNjY3MjEwNjY1fQ.3wEXB3a4cxc04lQShrJO9zeB7PMUdadG5cvsg8uU33g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"635e49c2831f8087c2c69b30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/unfavorite",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"unfavorite"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
